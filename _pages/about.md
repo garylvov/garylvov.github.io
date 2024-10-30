@@ -2,24 +2,38 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: <strong> Engineer and Researcher
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: gary_with_pr2.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
 
-news: true # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+
+news: false # includes a list of news items
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi! I'm passionate about solving challenging problems to create definite, broad, and positive impacts on
+people. Currently, I'm focused on robotics, machine learning, and machine perception as I believe 
+that these technologies have the potential to address scarcity. Time, energy, sustainability,
+productivity, housing, healthcare, food and self-determination are all in constant demand. While I 
+believe people must collaborate to solve our fundamental challenges, I'm hopeful that robots
+will play a vital role in supporting us along the way.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interests lie in creating general embodied agents that can reason, learn, and act in 
+the world they perceive. I've worked at the [Boston Dynamics AI Institute](https://theaiinstitute.com/),
+ [Amazon Robotics](https://www.linkedin.com/company/amazon-fulfillment-technologies-robotics/p),
+[General Electric Research](https://www.linkedin.com/company/geresearch/),
+ and the [Robotics & Intelligent Vehicles Research Lab](https://robot.neu.edu/)@[Northeastern](https://robotics.northeastern.edu/).
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+A note on my personal ethics, which have evolved over time: I strongly condemn the use of technology related to 
+adverse applications such as war, violence, subjugation, discrimination,
+surveillance, "deterrents", and "defense". While the pragmatist in me understands that military agencies
+ such as DARPA often fund open general research that can improve society, I prefer 
+ alternative sources of funding whenever possible, and I will not work on adverse applications or
+ for "defense" companies. I 
+ am a proponent of [Stop Killer Robots](https://www.stopkillerrobots.org/) and I agree
+ with many of the ideologies in [Prof. Ben Kuiper's article](https://web.eecs.umich.edu/~kuipers/opinions/no-military-funding.html). If you are interested in my work, I humbly request of you to use my efforts constructively, and to not corrupt it for any adverse applications.
