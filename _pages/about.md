@@ -29,11 +29,8 @@ the world they perceive. I've worked at the [Boston Dynamics AI Institute](https
 [General Electric Research](https://www.linkedin.com/company/geresearch/),
  and the [Robotics & Intelligent Vehicles Research Lab](https://robot.neu.edu/)@[Northeastern](https://robotics.northeastern.edu/).
 
-A note on my personal ethics, which have evolved over time: I strongly condemn the use of technology related to 
-adverse applications such as war, violence, subjugation, discrimination,
-surveillance, "deterrents", and "defense". While the pragmatist in me understands that military agencies
- such as DARPA often fund open general research that can improve society, I prefer 
- alternative sources of funding whenever possible, and I will not work on adverse applications or
- for "defense" companies. I 
+A note on my personal ethics, which have evolved over time: I will not work on certain applications of technology such as war, violence, weaponry,
+subjugation, discrimination, surveillance, policing, "deterrents", and "defense", or for "defense" companies. I 
  am a proponent of [Stop Killer Robots](https://www.stopkillerrobots.org/) and I agree
- with many of the ideologies in [Prof. Ben Kuiper's article](https://web.eecs.umich.edu/~kuipers/opinions/no-military-funding.html). If you are interested in my work, I humbly request of you to use my efforts constructively, and to not corrupt it for any adverse applications.
+ with many of the ideologies in [Prof. Ben Kuiper's article](https://web.eecs.umich.edu/~kuipers/opinions/no-military-funding.html). 
+ <strong> If you are interested in my work, I humbly request that you use my efforts constructively, and not corrupt my work for harm.
