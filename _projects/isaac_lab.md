@@ -7,7 +7,13 @@ importance: 1
 category: open-source
 --- 
 
-I've helped resolve over 20 issues: 
-- (Comments on issues by either @garylvov or @glvov-bdai) https://github.com/isaac-sim/IsaacLab/issues?q=is%3Aissue%20involves%3Agarylvov%20OR%20involves%3Aglvov-bdai
-- Comments on discussions by @garylvov https://github.com/isaac-sim/IsaacLab/discussions?discussions_q=commenter%3Agarylvov
-- Comments on discussions by @glvov-bdai https://github.com/isaac-sim/IsaacLab/discussions?discussions_q=commenter%3Aglvov-bdai
+Here are some highlights of my work on Isaac Lab:
+- Adding distributed hyperparameter tuning to Isaac Lab that can be run on a cluster or on a single machine ([documentation](https://isaac-sim.github.io/IsaacLab/main/source/features/ray.html), [code](https://github.com/isaac-sim/IsaacLab/tree/b1133e0591c2ef3a788c1ca148bb25a3f42562a9/scripts/reinforcement_learning/ray),[YouTube video covering the functionality](https://youtu.be/z7MDgSga2Ho?si=UgH5XngHa2uUu3lN)).
+
+- Adding support for [image feature extraction with pretrained frozen models](https://github.com/isaac-sim/IsaacLab/pull/1191).
+
+- Adding [standardized vision-based reinforcement learning environments](https://github.com/isaac-sim/IsaacLab/pull/995).
+
+- Adding a [tool to check the maximum amount of cameras that can be simulated on a GPU](https://isaac-sim.github.io/IsaacLab/main/source/how-to/estimate_how_many_cameras_can_run.html).
+
+- Supporting the community by helping resolve over 20 issues related to Isaac Lab([comments on issues by either @garylvov or @glvov-bdai](https://github.com/isaac-sim/IsaacLab/issues?q=is%3Aissue%20involves%3Agarylvov%20OR%20involves%3Aglvov-bdai), [comments on discussions by @garylvov](https://github.com/isaac-sim/IsaacLab/discussions?discussions_q=commenter%3Agarylvov), [comments on discussions by @glvov-bdai](https://github.com/isaac-sim/IsaacLab/discussions?discussions_q=commenter%3Aglvov-bdai)).
