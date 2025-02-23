@@ -7,7 +7,7 @@ importance: 2
 category: robotics
 --- 
 
-The method constructs a synthetic robot mesh from the robot's URDF/joint positions and uses ICP to find the transform from the robot mesh to the depth sensor's point cloud view of the robot, thus localizing the sensor relative to the robot. My code will hopefully be released soon!
+The method constructs a synthetic robot mesh from the robot's URDF/joint positions and uses ICP to find the transform from the robot mesh to the depth sensor's point cloud view of the robot, thus localizing the sensor relative to the robot. This works well across different robot models and depth sensors. My code will hopefully be released soon!
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
