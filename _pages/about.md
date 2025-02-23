@@ -17,8 +17,7 @@ social: true # includes social icons at the bottom of the page
 ---
 
 Hi! I'm passionate about solving challenging problems to create a definite, positive impact on people's lives. 
-Currently, I'm focused on robotics, machine learning, and machine perception as I believe 
-that these technologies have the potential to help address scarcity. While I 
+Currently, I'm focused on robotics, machine learning, and machine perception. While I 
 believe people must collaborate to solve our fundamental challenges, I'm hopeful that robots
 will play a vital role in supporting us along the way.
 
