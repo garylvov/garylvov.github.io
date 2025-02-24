@@ -1,0 +1,664 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> My Deep Learning Rig (Minerva) | Gary Lvov </title> <meta name="author" content="Gary Lvov "> <meta name="description" content="My beloved deep learning workstation"> <meta name="keywords" content="robotics, machine learning, computer vision"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://garylvov.github.io/projects/minerva/"> <script src="/assets/js/theme.js?9a0c749ec5240d9cda97bc72359a72c0"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>initTheme();</script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Gary Lvov</span> </a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="ti ti-sun-moon" id="light-toggle-system"></i> <i class="ti ti-moon-filled" id="light-toggle-dark"></i> <i class="ti ti-sun-filled" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">My Deep Learning Rig (Minerva)</h1> <p class="post-description">My beloved deep learning workstation</p> </header> <article> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/minerva/cased-480.webp 480w,/assets/img/minerva/cased-800.webp 800w,/assets/img/minerva/cased-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/minerva/cased.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Results" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/minerva/gpu_out-480.webp 480w,/assets/img/minerva/gpu_out-800.webp 800w,/assets/img/minerva/gpu_out-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/minerva/gpu_out.jpg" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Results" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/minerva/screenfetch-v1-480.webp 480w,/assets/img/minerva/screenfetch-v1-800.webp 800w,/assets/img/minerva/screenfetch-v1-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/minerva/screenfetch-v1.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Results" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <p>View the parts list <a href="https://docs.google.com/spreadsheets/d/1JUgSV6aVaqvW5jET3J5IoqAC02ErcvO4mrwiM4GXQ-0/edit?usp=sharing" rel="external nofollow noopener" target="_blank">here</a>. Tim Dettmers’ <a href="https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/" rel="external nofollow noopener" target="_blank">deep learning hardware blog</a> and <a href="https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/" rel="external nofollow noopener" target="_blank">gpu guide</a> were instrumental in helping me build this rig.</p> <p>My friends often ask, “Why would you possibly need 4 GPUs?” or “Why would you spend so much on a computer?”</p> <p>The short answer is that it is an investment to be able to train and run machine learning models as fast as possible locally to encourage me to experiment frequently while owning what I create.</p> <p>Most modern models support distributed data parallelism, or other forms of parallelism, which allows for training on multiple GPUs while recieving a speedup proportional to the number of GPUs.</p> <p>My system runs <code class="language-plaintext highlighter-rouge">2x NVIDIA 3090 TI 24G</code> and <code class="language-plaintext highlighter-rouge">2x NVIDIA 3090 24G</code> (96GB VRAM total) at a GPU clock <code class="language-plaintext highlighter-rouge">~1750Mhz - 1800Mhz</code> speed limit and <code class="language-plaintext highlighter-rouge">300W</code> limit per card (limits are for training stability to prevent triggering PSU safety stops). Under full load, the system peaks at about <code class="language-plaintext highlighter-rouge">1550W</code> total power draw and <code class="language-plaintext highlighter-rouge">75C</code> internal temperature. Minerva also features a <code class="language-plaintext highlighter-rouge">16-core 32-thread AMD Threadripper 7955wx</code> (<code class="language-plaintext highlighter-rouge">3.5Mhz</code> base, <code class="language-plaintext highlighter-rouge">4.5Mhz</code> boost), and <code class="language-plaintext highlighter-rouge">128G</code> DDR5 RAM.</p> <h1 id="what-sort-of-workloads-can-minvera-run">What sort of workloads can Minvera run?</h1> <p>For all of the following workloads, I set up the GPUs according <a href="https://github.com/garylvov/dev_env/blob/main/setup_scripts/nvidia/README.md" rel="external nofollow noopener" target="_blank">to my guide</a>. Having the NVIDIA Container Toolkit is essential for the majority of my desired workloads.</p> <h2 id="case-study-i-nvidia-isaac-lab-multi-gpu-training">Case Study I: NVIDIA Isaac Lab Multi-GPU training</h2> <p>I ran multi-gpu training to benchmark against the <a href="https://isaac-sim.github.io/IsaacLab/main/source/overview/reinforcement-learning/performance_benchmarks.html" rel="external nofollow noopener" target="_blank">Isaac Lab perfomance benchmarks</a>, where a Single-Node, <code class="language-plaintext highlighter-rouge">4x NVIDIA L40</code> GPU, CPU: Intel(R) Xeon(R) Platinum 8362 CPU @ 2.80GHz achieves 390,000 frames per second for environment step (with 8192 environments per GPU), inference and train in the <code class="language-plaintext highlighter-rouge">Isaac-Repose-Cube-Shadow-Direct-v0</code> RL environment. In this environment, a robot hand learns to position a cube in the desired orientation.</p> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the commands to run multi-GPU training inside of Docker</b></summary> <div class="language-python highlighter-rouge"> <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">mkdir</span> <span class="nt">-p</span> projects/ <span class="o">&amp;&amp;</span> <span class="nb">cd </span>projects <span class="o">&amp;&amp;</span> git clone https://github.com/isaac-sim/IsaacLab.git <span class="o">&amp;&amp;</span> <span class="nb">cd </span>IsaacLabs
+<span class="nb">echo</span> <span class="se">\</span>
+<span class="s2">"services:
+  isaac-lab-base:
+    shm_size: '2gb'"</span> <span class="o">&gt;</span> docker/shm-config.yaml
+./docker/container.py start <span class="nt">--files</span> shm-config.yaml
+<span class="c"># [INFO] Using container profile: base</span>
+<span class="c"># [INFO] X11 Forwarding is configured as '0' in '.container.cfg'.</span>
+<span class="c"># 	To enable X11 forwarding, set 'X11_FORWARDING_ENABLED=1' in '.container.cfg'.</span>
+<span class="c"># [INFO] Building the docker image and starting the container 'isaac-lab-base' in the background...</span>
+<span class="c">#  ✔ isaac-lab-base            Built                                                                                                     0.0s </span>
+<span class="c">#  ✔ Container isaac-lab-base  Started                                                                                                  11.7s </span>
+python3 docker/container.py enter
+<span class="c"># [INFO] Using container profile: base</span>
+<span class="c"># [INFO] X11 Forwarding is disabled from the settings in '.container.cfg'</span>
+<span class="c"># [INFO] X11 forwarding is disabled. No action taken.</span>
+<span class="c"># [INFO] Entering the existing 'isaac-lab-base' container in a bash session...</span>
+
+<span class="c"># Option A: Training (8192 environments per GPU)</span>
+<span class="nv">OMP_NUM_THREADS</span><span class="o">=</span>8 python <span class="nt">-m</span> torch.distributed.run <span class="nt">--nnodes</span><span class="o">=</span>1 <span class="nt">--nproc_per_node</span><span class="o">=</span>4 scripts/reinforcement_learning/rl_games/train.py <span class="nt">--task</span><span class="o">=</span>Isaac-Repose-Cube-Shadow-Direct-v0 <span class="nt">--headless</span> <span class="nt">--distributed</span>
+<span class="c"># Example RL Games output collected</span>
+<span class="c"># fps step: 611460 fps step and policy inference: 588767 fps total: 472288 epoch: 174/5000 frames: 90701824</span>
+<span class="c"># fps step: 592850 fps step and policy inference: 571132 fps total: 464365 epoch: 175/5000 frames: 91226112</span>
+<span class="c"># fps step: 616768 fps step and policy inference: 594105 fps total: 479784 epoch: 176/5000 frames: 91750400</span>
+<span class="c"># fps step: 602694 fps step and policy inference: 581137 fps total: 477391 epoch: 177/5000 frames: 92274688</span>
+
+<span class="c"># Option B: Training Benchmark</span>
+python scripts/benchmarks/benchmark_rlgames.py <span class="nt">--task</span><span class="o">=</span>Isaac-Repose-Cube-Shadow-Direct-v0 <span class="nt">--headless</span></code></pre></figure> </div> </details> <p>It would appear, from the RL Games training output, that Minerva runs training and simulation at around ~477,000 FPS, or ~23% faster than the benchmarked <code class="language-plaintext highlighter-rouge">4x L40</code> node, and ~182% faster than <code class="language-plaintext highlighter-rouge">1x 4090</code> (which achieves 170,000 FPS), while running at a clock limit of <code class="language-plaintext highlighter-rouge">1750MHz</code>. However, a <code class="language-plaintext highlighter-rouge">1x 4090</code> is faster than <code class="language-plaintext highlighter-rouge">1x 3090TI</code>.</p> <p>On Minerva, the hand cube repose task can be solved within 20 minutes with 4 GPUs. It takes longer with one GPU.</p> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See verbose output of benchmark</b></summary> <div class="language-python highlighter-rouge"> <figure class="highlight"><pre><code class="language-bash" data-lang="bash">root@minerva:/workspace/isaaclab# python scripts/benchmarks/benchmark_rlgames.py <span class="nt">--task</span><span class="o">=</span>Isaac-Repose-Cube-Shadow-Direct-v0 <span class="nt">--headless</span>
+<span class="o">[</span>INFO][AppLauncher]: Loading experience file: /workspace/isaaclab/apps/isaaclab.python.headless.kit
+Loading user config located at: <span class="s1">'/isaac-sim/kit/data/Kit/Isaac-Sim/4.5/user.config.json'</span>
+<span class="o">[</span>Info] <span class="o">[</span>carb] Logging to file: /isaac-sim/kit/logs/Kit/Isaac-Sim/4.5/kit_20250224_025719.log
+2025-02-24 02:57:19 <span class="o">[</span>0ms] <span class="o">[</span>Warning] <span class="o">[</span>omni.kit.app.plugin] No crash reporter present, dumps uploading isn<span class="s1">'t available.
+2025-02-24 02:57:20 [436ms] [Warning] [omni.usd_config.extension] Enable omni.materialx.libs extension to use MaterialX
+Authorization required, but no authorization protocol specified
+2025-02-24 02:57:20 [508ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can'</span>t verify X Server version.
+Authorization required, but no authorization protocol specified
+2025-02-24 02:57:20 <span class="o">[</span>612ms] <span class="o">[</span>Warning] <span class="o">[</span>omni.datastore] OmniHub is inaccessible
+2025-02-24 02:57:20 <span class="o">[</span>760ms] <span class="o">[</span>Warning] <span class="o">[</span>omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+Authorization required, but no authorization protocol specified
+Authorization required, but no authorization protocol specified
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 560.35.03     | Graphics API: Vulkan
+|<span class="o">=============================================================================================</span>|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 3090 Ti       | Yes: 0 |     | 24810   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2203      | 2b26c591.. |
+|     |                                  |        |     |            | 1         |            |
+|---------------------------------------------------------------------------------------------|
+| 1   | NVIDIA GeForce RTX 3090          | Yes: 1 |     | 24822   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2204      | 49e6f8d4.. |
+|     |                                  |        |     |            | 21        |            |
+|---------------------------------------------------------------------------------------------|
+| 2   | NVIDIA GeForce RTX 3090          | Yes: 2 |     | 24822   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2204      | c9400bc1.. |
+|     |                                  |        |     |            | c1        |            |
+|---------------------------------------------------------------------------------------------|
+| 3   | NVIDIA GeForce RTX 3090 Ti       | Yes: 3 |     | 24810   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2203      | 080243db.. |
+|     |                                  |        |     |            | e1        |            |
+|<span class="o">=============================================================================================</span>|
+| OS: 22.04.5 LTS <span class="o">(</span>Jammy Jellyfish<span class="o">)</span> ubuntu, Version: 22.04.5, Kernel: 6.8.0-52-generic
+| Processor: AMD Ryzen Threadripper PRO 7955WX 16-Cores
+| Cores: 16 | Logical Cores: 32
+|---------------------------------------------------------------------------------------------|
+| Total Memory <span class="o">(</span>MB<span class="o">)</span>: 128295 | Free Memory: 101049
+| Total Page/Swap <span class="o">(</span>MB<span class="o">)</span>: 2047 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+2025-02-24 02:57:24 <span class="o">[</span>4,832ms] <span class="o">[</span>Warning] <span class="o">[</span>gpu.foundation.plugin] IOMMU is enabled.
+2025-02-24 02:57:24 <span class="o">[</span>4,832ms] <span class="o">[</span>Warning] <span class="o">[</span>gpu.foundation.plugin] Detected IOMMU is enabled. Running CUDA peer-to-peer bandwidth and latency validation.
+Unidirectional <span class="nv">P2P</span><span class="o">=</span>Enabled Bandwidth <span class="o">(</span>P2P Writes<span class="o">)</span> Matrix <span class="o">(</span>GB/s<span class="o">)</span>
+   D<span class="se">\D</span>     0      1      2      3 
+     0 890.82  11.31  11.28  11.34 
+     1  11.26 862.89  11.31  11.35 
+     2  11.31  11.32 832.00  11.30 
+     3  11.27  11.37  11.29 831.12 
+<span class="nv">P2P</span><span class="o">=</span>Enabled Latency <span class="o">(</span>P2P Writes<span class="o">)</span> Matrix <span class="o">(</span>us<span class="o">)</span>
+   GPU     0      1      2      3 
+     0   1.68  10.72  11.05  10.55 
+     1  12.86   1.66  10.75  14.99 
+     2  16.30  16.39   1.66  19.46 
+     3  13.61  14.69  17.88   1.67 
+
+   CPU     0      1      2      3 
+     0   1.71   5.17   5.04   4.91 
+     1   5.06   1.56   4.97   4.42 
+     2   4.96   4.61   1.48   4.52 
+     3   4.95   4.56   4.56   1.42 
+2025-02-24 02:57:25 <span class="o">[</span>5,798ms] <span class="o">[</span>Warning] <span class="o">[</span>gpu.foundation.plugin] CUDA peer-to-peer observed bandwidth: 11.3 GB/s.
+2025-02-24 02:57:25 <span class="o">[</span>5,798ms] <span class="o">[</span>Warning] <span class="o">[</span>gpu.foundation.plugin] CUDA peer-to-peer observed latency: 19.5 us.
+2025-02-24 02:57:25 <span class="o">[</span>5,798ms] <span class="o">[</span>Warning] <span class="o">[</span>gpu.foundation.plugin] Please verify <span class="k">if </span>observed bandwidth and latency are expected.
+2025-02-24 02:57:26 <span class="o">[</span>6,720ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Generating formatted report <span class="o">=</span> True
+2025-02-24 02:57:26 <span class="o">[</span>6,720ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Using metrics backend <span class="o">=</span> OmniPerfKPIFile
+2025-02-24 02:57:26 <span class="o">[</span>6,720ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Local folder location <span class="o">=</span> /tmp
+2025-02-24 02:57:26 <span class="o">[</span>6,720ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Starting
+2025-02-24 02:57:26 <span class="o">[</span>6,720ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Test mode <span class="o">=</span> False
+<span class="o">[</span>INFO]: Parsing configuration from: isaaclab_tasks.direct.shadow_hand.shadow_hand_env_cfg:ShadowHandEnvCfg
+<span class="o">[</span>INFO]: Parsing configuration from: /workspace/isaaclab/source/isaaclab_tasks/isaaclab_tasks/direct/shadow_hand/agents/rl_games_ppo_cfg.yaml
+<span class="o">[</span>INFO] Logging experiment <span class="k">in </span>directory: /workspace/isaaclab/logs/rl_games/shadow_hand
+2025-02-24 02:57:26 <span class="o">[</span>6,924ms] <span class="o">[</span>Warning] <span class="o">[</span>isaaclab.envs.direct_rl_env] Seed not <span class="nb">set </span><span class="k">for </span>the environment. The environment creation may not be deterministic.
+<span class="o">[</span>INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.008333333333333333
+	Rendering step-size   : 0.016666666666666666
+	Environment step-size : 0.016666666666666666
+<span class="o">[</span>INFO]: Time taken <span class="k">for </span>scene creation : 2.152462 seconds
+<span class="o">[</span>INFO]: Scene manager:  &lt;class InteractiveScene&gt;
+	Number of environments: 8192
+	Environment spacing   : 0.75
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : <span class="o">[]</span>
+	Replicate physics     : True
+<span class="o">[</span>INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2025-02-24 02:57:31 <span class="o">[</span>11,745ms] <span class="o">[</span>Warning] <span class="o">[</span>isaaclab.assets.articulation.articulation] ImplicitActuatorCfg fingers has <span class="nb">set </span>both effort_limit_sim and effort_limit.Only effort_limit_sim will be used <span class="k">for </span>ImplicitActuators.
+2025-02-24 02:57:31 <span class="o">[</span>11,745ms] <span class="o">[</span>Warning] <span class="o">[</span>isaaclab.assets.articulation.articulation] ImplicitActuatorCfg fingers has <span class="nb">set </span>both velocity_limit_sim and velocity_limit.Only velocity_limit_sim will be used <span class="k">for </span>ImplicitActuators.
+<span class="o">[</span>INFO]: Time taken <span class="k">for </span>simulation start : 6.141075 seconds
+<span class="o">[</span>INFO]: Completed setting up the environment...
+self.seed <span class="o">=</span> 42
+Setting seed: 42
+2025-02-24 02:57:34 <span class="o">[</span>15,364ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Starting phase: sim_runtime
+Started to train
+Exact experiment name requested from <span class="nb">command </span>line: 2025-02-24_02-57-26
+seq_length: 4
+current training device: cuda:0
+/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/rl_games/common/a2c_common.py:254: FutureWarning: <span class="sb">`</span>torch.cuda.amp.GradScaler<span class="o">(</span>args...<span class="o">)</span><span class="sb">`</span> is deprecated. Please use <span class="sb">`</span>torch.amp.GradScaler<span class="o">(</span><span class="s1">'cuda'</span>, args...<span class="o">)</span><span class="sb">`</span> instead.
+  self.scaler <span class="o">=</span> torch.cuda.amp.GradScaler<span class="o">(</span><span class="nv">enabled</span><span class="o">=</span>self.mixed_precision<span class="o">)</span>
+build mlp: 157
+RunningMeanStd:  <span class="o">(</span>1,<span class="o">)</span>
+RunningMeanStd:  <span class="o">(</span>157,<span class="o">)</span>
+/workspace/isaaclab/_isaac_sim/kit/python/lib/python3.10/site-packages/rl_games/algos_torch/a2c_continuous.py:106: FutureWarning: <span class="sb">`</span>torch.cuda.amp.autocast<span class="o">(</span>args...<span class="o">)</span><span class="sb">`</span> is deprecated. Please use <span class="sb">`</span>torch.amp.autocast<span class="o">(</span><span class="s1">'cuda'</span>, args...<span class="o">)</span><span class="sb">`</span> instead.
+  with torch.cuda.amp.autocast<span class="o">(</span><span class="nv">enabled</span><span class="o">=</span>self.mixed_precision<span class="o">)</span>:
+fps step: 58550 fps step and policy inference: 56747 fps total: 52351 epoch: 1/10 frames: 0
+fps step: 184865 fps step and policy inference: 178640 fps total: 152956 epoch: 2/10 frames: 131072
+fps step: 187879 fps step and policy inference: 181181 fps total: 154814 epoch: 3/10 frames: 262144
+fps step: 190668 fps step and policy inference: 183906 fps total: 156801 epoch: 4/10 frames: 393216
+fps step: 194337 fps step and policy inference: 187281 fps total: 159257 epoch: 5/10 frames: 524288
+fps step: 197345 fps step and policy inference: 190092 fps total: 161290 epoch: 6/10 frames: 655360
+fps step: 199005 fps step and policy inference: 191577 fps total: 162346 epoch: 7/10 frames: 786432
+fps step: 197395 fps step and policy inference: 190023 fps total: 161233 epoch: 8/10 frames: 917504
+fps step: 188600 fps step and policy inference: 181344 fps total: 154939 epoch: 9/10 frames: 1048576
+fps step: 190855 fps step and policy inference: 183552 fps total: 156531 epoch: 10/10 frames: 1179648
+<span class="o">=&gt;</span> saving checkpoint <span class="s1">'/workspace/isaaclab/logs/rl_games/shadow_hand/2025-02-24_02-57-26/nn/last_shadow_hand_ep_10_rew__-19.991896_.pth'</span>
+MAX EPOCHS NUM!
+2025-02-24 02:57:48 <span class="o">[</span>29,315ms] <span class="o">[</span>Warning] <span class="o">[</span>isaacsim.benchmark.services.recorders] Detected multiple GPU types: <span class="o">[</span><span class="s1">'NVIDIA GeForce RTX 3090 Ti'</span>, <span class="s1">'NVIDIA GeForce RTX 3090 Ti'</span>, <span class="s1">'NVIDIA GeForce RTX 3090'</span>, <span class="s1">'NVIDIA GeForce RTX 3090'</span><span class="o">]</span><span class="nb">.</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,315ms] <span class="o">[</span>Warning] <span class="o">[</span>isaacsim.benchmark.services.recorders] Only recording GPU 0 <span class="nb">type</span>: NVIDIA GeForce RTX 3090 Ti
+/isaac-sim/exts/isaacsim.benchmark.services/isaacsim/benchmark/services/datarecorders/frametime.py:98: DeprecationWarning: The <span class="s1">'warn'</span> method is deprecated, use <span class="s1">'warning'</span> instead
+  logger.warn<span class="o">(</span>f<span class="s2">"Unable to calculate frametime stats: {e}"</span><span class="o">)</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,375ms] <span class="o">[</span>WARNING] <span class="o">[</span>isaacsim.benchmark.services.datarecorders.frametime] Unable to calculate frametime stats: mean requires at least one data point
+2025-02-24 02:57:48 <span class="o">[</span>29,376ms] <span class="o">[</span>WARNING] <span class="o">[</span>isaacsim.benchmark.services.datarecorders.frametime] Unable to calculate frametime stats: mean requires at least one data point
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Created new phase <span class="s1">'startup'</span> and stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'App Launch Time'</span>, <span class="nv">value</span><span class="o">=</span>5973.722584, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Python Imports Time'</span>, <span class="nv">value</span><span class="o">=</span>179.755971, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'startup'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Task Creation and Start Time'</span>, <span class="nv">value</span><span class="o">=</span>8385.666631, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'startup'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Scene Creation Time'</span>, <span class="nv">value</span><span class="o">=</span>2152.4621120006486, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'startup'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Simulation Start Time'</span>, <span class="nv">value</span><span class="o">=</span>6141.0754440003075, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'startup'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Total Start Time (Launch to Train)'</span>, <span class="nv">value</span><span class="o">=</span>15321.311632, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'startup'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Created new phase <span class="s1">'runtime'</span> and stored DictMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Step Frametimes'</span>, <span class="nv">value</span><span class="o">={</span><span class="s1">'Environment only step time'</span>: <span class="o">[</span>2.238626480102539, 0.7090144157409668, 0.6976408958435059, 0.6874349117279053, 0.6744587421417236, 0.6641781330108643, 0.6586358547210693, 0.6640071868896484, 0.694974422454834], <span class="s1">'Environment + Inference step time'</span>: <span class="o">[</span>2.3097691535949707, 0.7337219715118408, 0.7234294414520264, 0.7127134799957275, 0.6998662948608398, 0.6895182132720947, 0.6841747760772705, 0.6897702217102051, 0.7227792739868164], <span class="s1">'Environment + Inference + Policy update time'</span>: <span class="o">[</span>0.19395899772644043, 0.12320470809936523, 0.12321305274963379, 0.12320137023925781, 0.12315535545349121, 0.12313103675842285, 0.12318849563598633, 0.12316560745239258, 0.12317991256713867], <span class="s1">'Environment only FPS'</span>: <span class="o">[</span>58550.1875, 184865.078125, 187878.890625, 190668.234375, 194336.578125, 197344.640625, 199005.265625, 197395.453125, 188599.75], <span class="s1">'Environment + Inference FPS'</span>: <span class="o">[</span>56746.796875, 178639.875, 181181.453125, 183905.59375, 187281.484375, 190092.15625, 191576.78125, 190022.703125, 181344.4375], <span class="s1">'Environment + Inference + Policy update FPS'</span>: <span class="o">[</span>52350.7265625, 152955.90625, 154813.828125, 156800.65625, 159257.0, 161289.75, 162345.75, 161232.84375, 154938.875]<span class="o">}</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'dict'</span><span class="o">)</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Min Environment only step time'</span>, <span class="nv">value</span><span class="o">=</span>0.6586358547210693, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Environment only step time'</span>, <span class="nv">value</span><span class="o">=</span>2.238626480102539, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Mean Environment only step time'</span>, <span class="nv">value</span><span class="o">=</span>0.8543301158481174, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Min Environment + Inference step time'</span>, <span class="nv">value</span><span class="o">=</span>0.6841747760772705, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Environment + Inference step time'</span>, <span class="nv">value</span><span class="o">=</span>2.3097691535949707, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Mean Environment + Inference step time'</span>, <span class="nv">value</span><span class="o">=</span>0.8850825362735324, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Min Environment + Inference + Policy update time'</span>, <span class="nv">value</span><span class="o">=</span>0.12313103675842285, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Environment + Inference + Policy update time'</span>, <span class="nv">value</span><span class="o">=</span>0.19395899772644043, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Mean Environment + Inference + Policy update time'</span>, <span class="nv">value</span><span class="o">=</span>0.13104428185356987, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Min Environment only FPS'</span>, <span class="nv">value</span><span class="o">=</span>58550.1875, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Environment only FPS'</span>, <span class="nv">value</span><span class="o">=</span>199005.265625, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Mean Environment only FPS'</span>, <span class="nv">value</span><span class="o">=</span>177627.11979166666, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Min Environment + Inference FPS'</span>, <span class="nv">value</span><span class="o">=</span>56746.796875, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Environment + Inference FPS'</span>, <span class="nv">value</span><span class="o">=</span>191576.78125, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Mean Environment + Inference FPS'</span>, <span class="nv">value</span><span class="o">=</span>171199.03125, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Min Environment + Inference + Policy update FPS'</span>, <span class="nv">value</span><span class="o">=</span>52350.7265625, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Environment + Inference + Policy update FPS'</span>, <span class="nv">value</span><span class="o">=</span>162345.75, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Mean Environment + Inference + Policy update FPS'</span>, <span class="nv">value</span><span class="o">=</span>146220.59288194444, <span class="nv">unit</span><span class="o">=</span><span class="s1">'ms'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'runtime'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,382ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Created new phase <span class="s1">'train'</span> and stored ListMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Rewards'</span>, <span class="nv">length</span><span class="o">=</span>8<span class="o">)</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Rewards'</span>, <span class="nv">value</span><span class="o">=</span><span class="nt">-6</span>.726855278015137, <span class="nv">unit</span><span class="o">=</span><span class="s1">'float'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'train'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored ListMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Episode Lengths'</span>, <span class="nv">length</span><span class="o">=</span>8<span class="o">)</span> <span class="k">for </span>phase <span class="s1">'train'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stored SingleMeasurement<span class="o">(</span><span class="nv">name</span><span class="o">=</span><span class="s1">'Max Episode Lengths'</span>, <span class="nv">value</span><span class="o">=</span>104.1601333618164, <span class="nv">unit</span><span class="o">=</span><span class="s1">'float'</span>, <span class="nb">type</span><span class="o">=</span><span class="s1">'single'</span><span class="o">)</span> <span class="k">for </span>phase <span class="s1">'train'</span>
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Stopping
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Writing metrics data.
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.base_isaac_benchmark] Metrics <span class="nb">type</span> <span class="o">=</span> OmniPerfKPIFile
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.metrics.backend] 
+sim_runtime Metrics:
+workflow_name: benchmark_rlgames_train
+task: Isaac-Repose-Cube-Shadow-Direct-v0
+max_iterations: 10
+phase: sim_runtime
+System Memory RSS: 6.484 GB
+System Memory VMS: 96.113 GB
+System Memory USS: 6.466 GB
+GPU Memory Tracked: 0.0 GB
+GPU Memory Dedicated: 0 GB
+System CPU iowait: 0.0 %
+System CPU system: 2.0 %
+System CPU user: 9.0 %
+System CPU idle: 89.0 %
+num_cpus: 32 
+gpu_device_name: NVIDIA GeForce RTX 3090 Ti 
+Mean App_Update Frametime: 0 ms
+Stdev App_Update Frametime: 0 ms
+Min App_Update Frametime: 0 ms
+Max App_Update Frametime: 0 ms
+Mean Physics Frametime: 18.81 ms
+Stdev Physics Frametime: 0.78 ms
+Min Physics Frametime: 17.52 ms
+Max Physics Frametime: 20.44 ms
+Mean GPU Frametime: 0 ms
+Stdev GPU Frametime: 0 ms
+Min GPU Frametime: 0 ms
+Max GPU Frametime: 0 ms
+Real Time Factor: 0.0 
+Runtime: 10932.26 ms
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.metrics.backend] 
+startup Metrics:
+workflow_name: benchmark_rlgames_train
+task: Isaac-Repose-Cube-Shadow-Direct-v0
+max_iterations: 10
+phase: startup
+App Launch Time: 5973.722584 ms
+Python Imports Time: 179.755971 ms
+Task Creation and Start Time: 8385.666631 ms
+Scene Creation Time: 2152.4621120006486 ms
+Simulation Start Time: 6141.0754440003075 ms
+Total Start Time <span class="o">(</span>Launch to Train<span class="o">)</span>: 15321.311632 ms
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.metrics.backend] 
+runtime Metrics:
+workflow_name: benchmark_rlgames_train
+task: Isaac-Repose-Cube-Shadow-Direct-v0
+max_iterations: 10
+phase: runtime
+Min Environment only step <span class="nb">time</span>: 0.6586358547210693 ms
+Max Environment only step <span class="nb">time</span>: 2.238626480102539 ms
+Mean Environment only step <span class="nb">time</span>: 0.8543301158481174 ms
+Min Environment + Inference step <span class="nb">time</span>: 0.6841747760772705 ms
+Max Environment + Inference step <span class="nb">time</span>: 2.3097691535949707 ms
+Mean Environment + Inference step <span class="nb">time</span>: 0.8850825362735324 ms
+Min Environment + Inference + Policy update <span class="nb">time</span>: 0.12313103675842285 ms
+Max Environment + Inference + Policy update <span class="nb">time</span>: 0.19395899772644043 ms
+Mean Environment + Inference + Policy update <span class="nb">time</span>: 0.13104428185356987 ms
+Min Environment only FPS: 58550.1875 ms
+Max Environment only FPS: 199005.265625 ms
+Mean Environment only FPS: 177627.11979166666 ms
+Min Environment + Inference FPS: 56746.796875 ms
+Max Environment + Inference FPS: 191576.78125 ms
+Mean Environment + Inference FPS: 171199.03125 ms
+Min Environment + Inference + Policy update FPS: 52350.7265625 ms
+Max Environment + Inference + Policy update FPS: 162345.75 ms
+Mean Environment + Inference + Policy update FPS: 146220.59288194444 ms
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.metrics.backend] 
+train Metrics:
+workflow_name: benchmark_rlgames_train
+task: Isaac-Repose-Cube-Shadow-Direct-v0
+max_iterations: 10
+phase: train
+Max Rewards: <span class="nt">-6</span>.726855278015137 float
+Max Episode Lengths: 104.1601333618164 float
+2025-02-24 02:57:48 <span class="o">[</span>29,383ms] <span class="o">[</span>INFO] <span class="o">[</span>isaacsim.benchmark.services.metrics.backend] Writing metrics to /tmp/kpis_benchmark_rlgames_train.json
+|----------------------------------------------------|
+|                   Summary Report                   |
+|----------------------------------------------------|
+| workflow_name: benchmark_rlgames_train             |
+| task: Isaac-Repose-Cube-Shadow-Direct-v0           |
+| max_iterations: 10                                 |
+| num_cpus: 32                                       |
+| gpu_device_name: NVIDIA GeForce RTX 3090 Ti        |
+|----------------------------------------------------|
+| Phase: sim_runtime                                 |
+| System Memory RSS: 6.484 GB                        |
+| System Memory VMS: 96.113 GB                       |
+| System Memory USS: 6.466 GB                        |
+| GPU Memory Tracked: 0.0 GB                         |
+| Real Time Factor: 0.0                              |
+| Runtime: 10932.26 ms                               |
+| Frametimes <span class="o">(</span>ms<span class="o">)</span>:    mean |  stdev |   min |   max  |
+| App_Update          0.00 |   0.00 |  0.00 |  0.00  |
+| Physics            18.81 |   0.78 | 17.52 | 20.44  |
+| GPU                 0.00 |   0.00 |  0.00 |  0.00  |
+|----------------------------------------------------|
+| Phase: startup                                     |
+| App Launch Time: 5973.722584 ms                    |
+| Python Imports Time: 179.755971 ms                 |
+| Task Creation and Start Time: 8385.666631 ms       |
+| Scene Creation Time: 2152.4621120006486 ms         |
+| Simulation Start Time: 6141.0754440003075 ms       |
+| Total Start Time <span class="o">(</span>Launch to Train<span class="o">)</span>: 15321.311632 ms |
+|----------------------------------------------------|
+| Phase: runtime                                     |
+| Min Environment only step <span class="nb">time</span>: 0.6586358547210693 ms |
+| Max Environment only step <span class="nb">time</span>: 2.238626480102539 ms |
+| Mean Environment only step <span class="nb">time</span>: 0.8543301158481174 ms |
+| Min Environment + Inference step <span class="nb">time</span>: 0.6841747760772705 ms |
+| Max Environment + Inference step <span class="nb">time</span>: 2.3097691535949707 ms |
+| Mean Environment + Inference step <span class="nb">time</span>: 0.8850825362735324 ms |
+| Min Environment + Inference + Policy update <span class="nb">time</span>: 0.12313103675842285 ms |
+| Max Environment + Inference + Policy update <span class="nb">time</span>: 0.19395899772644043 ms |
+| Mean Environment + Inference + Policy update <span class="nb">time</span>: 0.13104428185356987 ms |
+| Min Environment only FPS: 58550.1875 ms            |
+| Max Environment only FPS: 199005.265625 ms         |
+| Mean Environment only FPS: 177627.11979166666 ms   |
+| Min Environment + Inference FPS: 56746.796875 ms   |
+| Max Environment + Inference FPS: 191576.78125 ms   |
+| Mean Environment + Inference FPS: 171199.03125 ms  |
+| Min Environment + Inference + Policy update FPS: 52350.7265625 ms |
+| Max Environment + Inference + Policy update FPS: 162345.75 ms |
+| Mean Environment + Inference + Policy update FPS: 146220.59288194444 ms |
+|----------------------------------------------------|
+| Phase: train                                       |
+| Max Rewards: <span class="nt">-6</span>.726855278015137 float              |
+| Max Episode Lengths: 104.1601333618164 float       |
+|----------------------------------------------------|
+root@minerva:/workspace/isaaclab# </code></pre></figure> <div class="highlight"> </div> </div> </details> <h2 id="case-study-ii-nvidia-isaac-lab-hyperparameter-tuning">Case Study II: NVIDIA Isaac Lab Hyperparameter Tuning</h2> <p>Minerva can run 4 parallel NVIDIA Isaac Lab training runs at once, one on each GPU. This is enabled by the <a href="https://isaac-sim.github.io/IsaacLab/main/source/features/ray.html" rel="external nofollow noopener" target="_blank">Ray functionality</a> that I added to Isaac Lab. The following is an example of tuning quadrupedal gait parameters on flat terrain with 4 parallel similar experiments.</p> <div class="row"> <div class="col-sm mt-3 mt-md-0"> <figure> <picture> <source class="responsive-img-srcset" srcset="/assets/img/minerva/isaac-ray-tune-480.webp 480w,/assets/img/minerva/isaac-ray-tune-800.webp 800w,/assets/img/minerva/isaac-ray-tune-1400.webp 1400w," type="image/webp" sizes="95vw"></source> <img src="/assets/img/minerva/isaac-ray-tune.png" class="img-fluid rounded z-depth-1" width="100%" height="auto" title="Results" loading="eager" onerror="this.onerror=null; $('.responsive-img-srcset').remove();"> </picture> </figure> </div> </div> <h2 id="case-study-iii-yolov11-training-with-ultralytics">Case Study III: YoloV11 Training with Ultralytics</h2> <p>For the Northeastern Mars Rover team, I trained a “mallet” and “bottle” detector. About 27,000 images at <code class="language-plaintext highlighter-rouge">800p</code> resolution were used to train 409 layers, 20,054,550 parameters, 20,054,534 gradients, with 12 epochs taking about 24 minutes.</p> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the code snippet of running the model</b></summary> <div class="language-python highlighter-rouge"> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="n">ultralytics</span> <span class="kn">import</span> <span class="n">YOLO</span>
+<span class="kn">from</span> <span class="n">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="nc">YOLO</span><span class="p">(</span><span class="sh">"</span><span class="s">yolo11m.pt</span><span class="sh">"</span><span class="p">)</span> 
+<span class="n">data_yaml</span> <span class="o">=</span> <span class="nf">str</span><span class="p">(</span><span class="nc">Path</span><span class="p">(</span><span class="n">__file__</span><span class="p">).</span><span class="n">parent</span> <span class="o">/</span> <span class="sh">"</span><span class="s">dataset/data.yaml</span><span class="sh">"</span><span class="p">)</span>  
+
+<span class="n">model</span><span class="p">.</span><span class="nf">train</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data_yaml</span><span class="p">,</span> 
+            <span class="n">epochs</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> 
+            <span class="n">imgsz</span><span class="o">=</span><span class="mi">800</span><span class="p">,</span> 
+            <span class="n">batch</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+            <span class="n">cache</span><span class="o">=</span><span class="sh">"</span><span class="s">disk</span><span class="sh">"</span><span class="p">,</span>
+            <span class="n">freeze</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> 
+            <span class="n">copy_paste</span><span class="o">=</span><span class="p">.</span><span class="mi">8</span><span class="p">,</span>
+            <span class="n">hsv_v</span><span class="o">=</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span>
+            <span class="n">erasing</span><span class="o">=</span><span class="p">.</span><span class="mi">9</span><span class="p">,</span>
+            <span class="n">crop_fraction</span><span class="o">=</span><span class="p">.</span><span class="mi">8</span><span class="p">,</span>
+            <span class="n">translate</span><span class="o">=</span><span class="p">.</span><span class="mi">9</span><span class="p">,</span>
+            <span class="n">mixup</span><span class="o">=</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span>
+            <span class="n">perspective</span><span class="o">=</span><span class="mf">0.00005</span><span class="p">,</span>
+            <span class="n">patience</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> 
+            <span class="n">plots</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span> 
+            <span class="n">save</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> 
+	        <span class="n">workers</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span> 
+	        <span class="n">device</span><span class="o">=</span><span class="sh">"</span><span class="s">0,1,2,3</span><span class="sh">"</span><span class="p">,)</span></code></pre></figure> </div> </details> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the output of running the model</b></summary> <div class="language-python highlighter-rouge"> <figure class="highlight"><pre><code class="language-bash" data-lang="bash">python3 train.py <span class="c"># In conda environment</span>
+New https://pypi.org/project/ultralytics/8.3.78 available 😃 Update with <span class="s1">'pip install -U ultralytics'</span>
+Ultralytics 8.3.75 🚀 Python-3.11.11 torch-2.2.2+cu121 CUDA:0 <span class="o">(</span>NVIDIA GeForce RTX 3090 Ti, 24142MiB<span class="o">)</span>
+                                                       CUDA:1 <span class="o">(</span>NVIDIA GeForce RTX 3090 Ti, 24139MiB<span class="o">)</span>
+                                                       CUDA:2 <span class="o">(</span>NVIDIA GeForce RTX 3090, 24154MiB<span class="o">)</span>
+                                                       CUDA:3 <span class="o">(</span>NVIDIA GeForce RTX 3090, 24154MiB<span class="o">)</span>
+engine/trainer: <span class="nv">task</span><span class="o">=</span>detect, <span class="nv">mode</span><span class="o">=</span>train, <span class="nv">model</span><span class="o">=</span>yolo11m.pt, <span class="nv">data</span><span class="o">=</span>/home/garylvov/projects/urc_mallet_model_2025/dataset/data.yaml, <span class="nv">epochs</span><span class="o">=</span>100, <span class="nb">time</span><span class="o">=</span>None, <span class="nv">patience</span><span class="o">=</span>20, <span class="nv">batch</span><span class="o">=</span>100, <span class="nv">imgsz</span><span class="o">=</span>800, <span class="nv">save</span><span class="o">=</span>True, <span class="nv">save_period</span><span class="o">=</span><span class="nt">-1</span>, <span class="nv">cache</span><span class="o">=</span>disk, <span class="nv">device</span><span class="o">=</span>0,1,2,3, <span class="nv">workers</span><span class="o">=</span>8, <span class="nv">project</span><span class="o">=</span>None, <span class="nv">name</span><span class="o">=</span>train37, <span class="nv">exist_ok</span><span class="o">=</span>False, <span class="nv">pretrained</span><span class="o">=</span>True, <span class="nv">optimizer</span><span class="o">=</span>auto, <span class="nv">verbose</span><span class="o">=</span>True, <span class="nv">seed</span><span class="o">=</span>0, <span class="nv">deterministic</span><span class="o">=</span>True, <span class="nv">single_cls</span><span class="o">=</span>False, <span class="nv">rect</span><span class="o">=</span>False, <span class="nv">cos_lr</span><span class="o">=</span>False, <span class="nv">close_mosaic</span><span class="o">=</span>10, <span class="nv">resume</span><span class="o">=</span>False, <span class="nv">amp</span><span class="o">=</span>True, <span class="nv">fraction</span><span class="o">=</span>1.0, <span class="nv">profile</span><span class="o">=</span>False, <span class="nv">freeze</span><span class="o">=</span>0, <span class="nv">multi_scale</span><span class="o">=</span>False, <span class="nv">overlap_mask</span><span class="o">=</span>True, <span class="nv">mask_ratio</span><span class="o">=</span>4, <span class="nv">dropout</span><span class="o">=</span>0.0, <span class="nv">val</span><span class="o">=</span>True, <span class="nb">split</span><span class="o">=</span>val, <span class="nv">save_json</span><span class="o">=</span>False, <span class="nv">save_hybrid</span><span class="o">=</span>False, <span class="nv">conf</span><span class="o">=</span>None, <span class="nv">iou</span><span class="o">=</span>0.7, <span class="nv">max_det</span><span class="o">=</span>300, <span class="nv">half</span><span class="o">=</span>False, <span class="nv">dnn</span><span class="o">=</span>False, <span class="nv">plots</span><span class="o">=</span>True, <span class="nb">source</span><span class="o">=</span>None, <span class="nv">vid_stride</span><span class="o">=</span>1, <span class="nv">stream_buffer</span><span class="o">=</span>False, <span class="nv">visualize</span><span class="o">=</span>False, <span class="nv">augment</span><span class="o">=</span>False, <span class="nv">agnostic_nms</span><span class="o">=</span>False, <span class="nv">classes</span><span class="o">=</span>None, <span class="nv">retina_masks</span><span class="o">=</span>False, <span class="nv">embed</span><span class="o">=</span>None, <span class="nv">show</span><span class="o">=</span>False, <span class="nv">save_frames</span><span class="o">=</span>False, <span class="nv">save_txt</span><span class="o">=</span>False, <span class="nv">save_conf</span><span class="o">=</span>False, <span class="nv">save_crop</span><span class="o">=</span>False, <span class="nv">show_labels</span><span class="o">=</span>True, <span class="nv">show_conf</span><span class="o">=</span>True, <span class="nv">show_boxes</span><span class="o">=</span>True, <span class="nv">line_width</span><span class="o">=</span>None, <span class="nv">format</span><span class="o">=</span>torchscript, <span class="nv">keras</span><span class="o">=</span>False, <span class="nv">optimize</span><span class="o">=</span>False, <span class="nv">int8</span><span class="o">=</span>False, <span class="nv">dynamic</span><span class="o">=</span>False, <span class="nv">simplify</span><span class="o">=</span>True, <span class="nv">opset</span><span class="o">=</span>None, <span class="nv">workspace</span><span class="o">=</span>None, <span class="nv">nms</span><span class="o">=</span>False, <span class="nv">lr0</span><span class="o">=</span>0.01, <span class="nv">lrf</span><span class="o">=</span>0.01, <span class="nv">momentum</span><span class="o">=</span>0.937, <span class="nv">weight_decay</span><span class="o">=</span>0.0005, <span class="nv">warmup_epochs</span><span class="o">=</span>3.0, <span class="nv">warmup_momentum</span><span class="o">=</span>0.8, <span class="nv">warmup_bias_lr</span><span class="o">=</span>0.1, <span class="nv">box</span><span class="o">=</span>7.5, <span class="nv">cls</span><span class="o">=</span>0.5, <span class="nv">dfl</span><span class="o">=</span>1.5, <span class="nv">pose</span><span class="o">=</span>12.0, <span class="nv">kobj</span><span class="o">=</span>1.0, <span class="nv">nbs</span><span class="o">=</span>64, <span class="nv">hsv_h</span><span class="o">=</span>0.015, <span class="nv">hsv_s</span><span class="o">=</span>0.7, <span class="nv">hsv_v</span><span class="o">=</span>0.3, <span class="nv">degrees</span><span class="o">=</span>0.0, <span class="nv">translate</span><span class="o">=</span>0.9, <span class="nv">scale</span><span class="o">=</span>0.5, <span class="nv">shear</span><span class="o">=</span>0.0, <span class="nv">perspective</span><span class="o">=</span>5e-05, <span class="nv">flipud</span><span class="o">=</span>0.0, <span class="nv">fliplr</span><span class="o">=</span>0.5, <span class="nv">bgr</span><span class="o">=</span>0.0, <span class="nv">mosaic</span><span class="o">=</span>1.0, <span class="nv">mixup</span><span class="o">=</span>0.4, <span class="nv">copy_paste</span><span class="o">=</span>0.8, <span class="nv">copy_paste_mode</span><span class="o">=</span>flip, <span class="nv">auto_augment</span><span class="o">=</span>randaugment, <span class="nv">erasing</span><span class="o">=</span>0.9, <span class="nv">crop_fraction</span><span class="o">=</span>0.8, <span class="nv">cfg</span><span class="o">=</span>None, <span class="nv">tracker</span><span class="o">=</span>botsort.yaml, <span class="nv">save_dir</span><span class="o">=</span>runs/detect/train37
+Overriding model.yaml <span class="nv">nc</span><span class="o">=</span>80 with <span class="nv">nc</span><span class="o">=</span>2
+
+                   from  n    params  module                                       arguments                     
+  0                  <span class="nt">-1</span>  1      1856  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>3, 64, 3, 2]                 
+  1                  <span class="nt">-1</span>  1     73984  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>64, 128, 3, 2]               
+  2                  <span class="nt">-1</span>  1    111872  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>128, 256, 1, True, 0.25]     
+  3                  <span class="nt">-1</span>  1    590336  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>256, 256, 3, 2]              
+  4                  <span class="nt">-1</span>  1    444928  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>256, 512, 1, True, 0.25]     
+  5                  <span class="nt">-1</span>  1   2360320  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>512, 512, 3, 2]              
+  6                  <span class="nt">-1</span>  1   1380352  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>512, 512, 1, True]           
+  7                  <span class="nt">-1</span>  1   2360320  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>512, 512, 3, 2]              
+  8                  <span class="nt">-1</span>  1   1380352  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>512, 512, 1, True]           
+  9                  <span class="nt">-1</span>  1    656896  ultralytics.nn.modules.block.SPPF            <span class="o">[</span>512, 512, 5]                 
+ 10                  <span class="nt">-1</span>  1    990976  ultralytics.nn.modules.block.C2PSA           <span class="o">[</span>512, 512, 1]                 
+ 11                  <span class="nt">-1</span>  1         0  torch.nn.modules.upsampling.Upsample         <span class="o">[</span>None, 2, <span class="s1">'nearest'</span><span class="o">]</span>          
+ 12             <span class="o">[</span><span class="nt">-1</span>, 6]  1         0  ultralytics.nn.modules.conv.Concat           <span class="o">[</span>1]                           
+ 13                  <span class="nt">-1</span>  1   1642496  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>1024, 512, 1, True]          
+ 14                  <span class="nt">-1</span>  1         0  torch.nn.modules.upsampling.Upsample         <span class="o">[</span>None, 2, <span class="s1">'nearest'</span><span class="o">]</span>          
+ 15             <span class="o">[</span><span class="nt">-1</span>, 4]  1         0  ultralytics.nn.modules.conv.Concat           <span class="o">[</span>1]                           
+ 16                  <span class="nt">-1</span>  1    542720  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>1024, 256, 1, True]          
+ 17                  <span class="nt">-1</span>  1    590336  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>256, 256, 3, 2]              
+ 18            <span class="o">[</span><span class="nt">-1</span>, 13]  1         0  ultralytics.nn.modules.conv.Concat           <span class="o">[</span>1]                           
+ 19                  <span class="nt">-1</span>  1   1511424  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>768, 512, 1, True]           
+ 20                  <span class="nt">-1</span>  1   2360320  ultralytics.nn.modules.conv.Conv             <span class="o">[</span>512, 512, 3, 2]              
+ 21            <span class="o">[</span><span class="nt">-1</span>, 10]  1         0  ultralytics.nn.modules.conv.Concat           <span class="o">[</span>1]                           
+ 22                  <span class="nt">-1</span>  1   1642496  ultralytics.nn.modules.block.C3k2            <span class="o">[</span>1024, 512, 1, True]          
+ 23        <span class="o">[</span>16, 19, 22]  1   1412566  ultralytics.nn.modules.head.Detect           <span class="o">[</span>2, <span class="o">[</span>256, 512, 512]]          
+YOLO11m summary: 409 layers, 20,054,550 parameters, 20,054,534 gradients, 68.2 GFLOPs
+
+Transferred 643/649 items from pretrained weights
+DDP: debug <span class="nb">command</span> /home/garylvov/.conda/envs/rover/bin/python3 <span class="nt">-m</span> torch.distributed.run <span class="nt">--nproc_per_node</span> 4 <span class="nt">--master_port</span> 52275 /home/garylvov/.config/Ultralytics/DDP/_temp_ugpib82l137958647273360.py
+Ultralytics 8.3.75 🚀 Python-3.11.11 torch-2.2.2+cu121 CUDA:0 <span class="o">(</span>NVIDIA GeForce RTX 3090 Ti, 24142MiB<span class="o">)</span>
+                                                       CUDA:1 <span class="o">(</span>NVIDIA GeForce RTX 3090 Ti, 24139MiB<span class="o">)</span>
+                                                       CUDA:2 <span class="o">(</span>NVIDIA GeForce RTX 3090, 24154MiB<span class="o">)</span>
+                                                       CUDA:3 <span class="o">(</span>NVIDIA GeForce RTX 3090, 24154MiB<span class="o">)</span>
+Overriding model.yaml <span class="nv">nc</span><span class="o">=</span>80 with <span class="nv">nc</span><span class="o">=</span>2
+Transferred 643/649 items from pretrained weights
+Freezing layer <span class="s1">'model.23.dfl.conv.weight'</span>
+AMP: running Automatic Mixed Precision <span class="o">(</span>AMP<span class="o">)</span> checks...
+AMP: checks passed ✅
+train: Scanning /home/garylvov/projects/urc_mallet_model_2025/dataset/train/labels.cache... 27339 images, 6966 backgrounds, 0 corrupt: 100%|██████████| 27339/27339 <span class="o">[</span>00:
+train: WARNING ⚠️ /home/garylvov/projects/urc_mallet_model_2025/dataset/train/images/000000278737.jpg: 1 duplicate labels removed
+train: WARNING ⚠️ /home/garylvov/projects/urc_mallet_model_2025/dataset/train/images/000000301977.jpg: 1 duplicate labels removed
+train: Caching images <span class="o">(</span>41.2GB Disk<span class="o">)</span>: 100%|██████████| 27339/27339 <span class="o">[</span>00:00&lt;00:00, 112448.68it/s]
+val: Scanning /home/garylvov/projects/urc_mallet_model_2025/dataset/valid/labels.cache... 575 images, 6 backgrounds, 0 corrupt: 100%|██████████| 575/575 <span class="o">[</span>00:00&lt;?, ?it/s
+val: Caching images <span class="o">(</span>0.7GB Disk<span class="o">)</span>: 100%|██████████| 575/575 <span class="o">[</span>00:00&lt;00:00, 86981.09it/s]
+Plotting labels to runs/detect/train37/labels.jpg... 
+optimizer: <span class="s1">'optimizer=auto'</span> found, ignoring <span class="s1">'lr0=0.01'</span> and <span class="s1">'momentum=0.937'</span> and determining best <span class="s1">'optimizer'</span>, <span class="s1">'lr0'</span> and <span class="s1">'momentum'</span> automatically... 
+optimizer: SGD<span class="o">(</span><span class="nv">lr</span><span class="o">=</span>0.01, <span class="nv">momentum</span><span class="o">=</span>0.9<span class="o">)</span> with parameter <span class="nb">groups </span>106 weight<span class="o">(</span><span class="nv">decay</span><span class="o">=</span>0.0<span class="o">)</span>, 113 weight<span class="o">(</span><span class="nv">decay</span><span class="o">=</span>0.00078125<span class="o">)</span>, 112 bias<span class="o">(</span><span class="nv">decay</span><span class="o">=</span>0.0<span class="o">)</span>
+Image sizes 800 train, 800 val
+Using 32 dataloader workers
+Logging results to runs/detect/train37
+Starting training <span class="k">for </span>100 epochs...
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      1/100      22.3G       1.51      1.979      1.248          5        800: 100%|██████████| 274/274 <span class="o">[</span>01:59&lt;00:00,  2.30it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.08it/s]
+                   all        575       1042      0.796      0.735      0.789      0.498
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      2/100      22.4G      1.578      1.431      1.251         13        800: 100%|██████████| 274/274 <span class="o">[</span>01:59&lt;00:00,  2.30it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.31it/s]
+                   all        575       1042      0.742      0.669       0.72      0.409
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      3/100      22.4G      1.813        1.8      1.395         15        800: 100%|██████████| 274/274 <span class="o">[</span>01:58&lt;00:00,  2.31it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.30it/s]
+                   all        575       1042      0.457      0.406      0.408      0.198
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      4/100      22.4G      1.959      2.035      1.536          9        800: 100%|██████████| 274/274 <span class="o">[</span>01:59&lt;00:00,  2.29it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.30it/s]
+                   all        575       1042      0.714      0.517      0.554      0.321
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      5/100      22.5G      1.852      1.842      1.483         11        800: 100%|██████████| 274/274 <span class="o">[</span>02:03&lt;00:00,  2.21it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.28it/s]
+                   all        575       1042      0.725      0.584      0.628      0.336
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      6/100      22.4G       1.78      1.717      1.441         21        800: 100%|██████████| 274/274 <span class="o">[</span>02:01&lt;00:00,  2.25it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.24it/s]
+                   all        575       1042      0.737      0.621      0.647      0.386
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      7/100      24.1G      1.732       1.63      1.409         17        800: 100%|██████████| 274/274 <span class="o">[</span>02:04&lt;00:00,  2.20it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.28it/s]
+                   all        575       1042      0.814      0.685       0.72      0.431
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      8/100      22.4G      1.693       1.61      1.391         49        800: 100%|██████████| 274/274 <span class="o">[</span>02:03&lt;00:00,  2.22it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.31it/s]
+                   all        575       1042      0.835       0.68       0.73      0.457
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+      9/100      22.4G      1.661      1.505      1.365         13        800: 100%|██████████| 274/274 <span class="o">[</span>02:03&lt;00:00,  2.22it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.34it/s]
+                   all        575       1042      0.808      0.722      0.747      0.459
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     10/100      22.4G      1.636      1.535      1.359         12        800: 100%|██████████| 274/274 <span class="o">[</span>02:01&lt;00:00,  2.26it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.33it/s]
+                   all        575       1042      0.805       0.72      0.743      0.484
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     11/100      23.3G      1.615      1.454      1.329         11        800: 100%|██████████| 274/274 <span class="o">[</span>02:03&lt;00:00,  2.23it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.30it/s]
+                   all        575       1042       0.85      0.721      0.764       0.49
+
+      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
+     12/100      22.4G      1.587      1.436      1.334         16        800: 100%|██████████| 274/274 <span class="o">[</span>02:05&lt;00:00,  2.19it/s]
+                 Class     Images  Instances      Box<span class="o">(</span>P          R      mAP50  mAP50-95<span class="o">)</span>: 100%|██████████| 12/12 <span class="o">[</span>00:02&lt;00:00,  4.29it/s]
+                   all        575       1042       0.83      0.728      0.781      0.491</code></pre></figure> </div> </details> <h2 id="case-study-iv-running-deepseek-r1-distill-llama-70b">Case Study IV: Running DeepSeek-R1-Distill-Llama-70B</h2> <p>Running DeepSeek with Ollama on NVIDIA GPUs requires the NVIDIA Container Toolkit as shown above. Then it’s as easy as increasing the context window on some 70B parameter distillations of Deepseek’s models to push Minerva’s limits.</p> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the code snippet of running Deepseek-r1:70B with a larger context window</b></summary> <div class="language-python highlighter-rouge"> <figure class="highlight"><pre><code class="language-bash" data-lang="bash">docker run <span class="nt">-d</span> <span class="nt">--gpus</span><span class="o">=</span>all <span class="nt">-v</span> ollama:/root/.ollama <span class="nt">-p</span> 11434:11434 <span class="nt">--name</span> ollama ollama/ollama
+docker <span class="nb">exec</span> <span class="nt">-it</span> ollama bash
+<span class="nb">echo</span> <span class="se">\</span>
+<span class="s2">"FROM deepseek-r1:70b
+PARAMETER num_ctx 131072
+PARAMETER num_predict 31072"</span> <span class="o">&gt;</span> Modelfile
+ollama create deepseek-r1-max-context-and-output-size:70b <span class="nt">-f</span> Modelfile
+<span class="c"># gathering model components </span>
+<span class="c"># writing manifest </span>
+<span class="c"># success </span>
+ollama run deepseek-r1-max-context-and-output-size:70b <span class="nt">--verbose</span>
+<span class="c"># After sample prompt:</span>
+<span class="c"># Spills over into 80gb of RAM, from VRAM so super slow </span>
+<span class="c"># total duration:       16.467195206s</span>
+<span class="c"># load duration:        12.409235ms</span>
+<span class="c"># prompt eval count:    10 token(s)</span>
+<span class="c"># prompt eval duration: 893ms</span>
+<span class="c"># prompt eval rate:     11.20 tokens/s</span>
+<span class="c"># eval count:           45 token(s)</span>
+<span class="c"># eval duration:        15.561s</span>
+<span class="c"># eval rate:            2.89 tokens/s</span>
+
+<span class="c"># Reset with ctrl + D pkill ollama and then redo run and exec it (may have to docker rm previous container ID)</span>
+<span class="c"># Let's fit this whole model onto VRAM.</span>
+<span class="nb">echo</span> <span class="se">\</span>
+<span class="s2">"FROM deepseek-r1:70b
+PARAMETER num_ctx 60000
+PARAMETER num_predict 30000"</span> <span class="o">&gt;</span> Modelfile
+ollama create deepseek-r1-60k-context-and-30k:70b <span class="nt">-f</span> Modelfile
+ollama run deepseek-r1-60k-context-and-30k:70b <span class="nt">--verbose</span>
+
+<span class="c"># After simple sample prompt:</span>
+<span class="c"># total duration:       2m5.635874804s</span>
+<span class="c"># load duration:        13.383071ms</span>
+<span class="c"># prompt eval count:    258 token(s)</span>
+<span class="c"># prompt eval duration: 509ms</span>
+<span class="c"># prompt eval rate:     506.88 tokens/s</span>
+<span class="c"># eval count:           1663 token(s)</span>
+<span class="c"># eval duration:        2m4.74s</span>
+<span class="c"># eval rate:            13.33 tokens/s</span>
+
+<span class="c"># When prompted with the contents of this post...</span>
+<span class="c"># total duration:       2m52.68976111s</span>
+<span class="c"># load duration:        13.345338ms</span>
+<span class="c"># prompt eval count:    16811 token(s)</span>
+<span class="c"># prompt eval duration: 45.742s</span>
+<span class="c"># prompt eval rate:     367.52 tokens/s</span>
+<span class="c"># eval count:           1118 token(s)</span>
+<span class="c"># eval duration:        2m6.854s</span>
+<span class="c"># eval rate:            8.81 tokens/s</span></code></pre></figure> </div> </details> <p>So, with a 60,000 token length context window, we are able to use <code class="language-plaintext highlighter-rouge">~92G</code> VRAM while running <code class="language-plaintext highlighter-rouge">deepseek-r1:70B</code>, while generating <code class="language-plaintext highlighter-rouge">8.81 tokens/s</code> and processing input at <code class="language-plaintext highlighter-rouge">367.52 tokens/s</code>.</p> <h1 id="cost-analysis---is-it-worth-it">Cost Analysis - is it worth it?</h1> <p>An <code class="language-plaintext highlighter-rouge">1x NVIDIA H100 80G</code> node can cost roughly $2-$3/hr to rent. An <code class="language-plaintext highlighter-rouge">H100</code> can’t do the ray tracing required for running <a href="https://isaac-sim.github.io/IsaacLab/main/index.html" rel="external nofollow noopener" target="_blank">NVIDIA Isaac Lab</a> with cameras, where an <code class="language-plaintext highlighter-rouge">2x NVIDIA A6000 48G</code> node (rentable on Lamba Labs cloud for ~$1.5/hr, 96GB VRAM total) or <code class="language-plaintext highlighter-rouge">4x NVIDIA L4 24G</code> node (such as <code class="language-plaintext highlighter-rouge">g6.24xlarge</code> on AWS, rentable for ~$6/hr, 96GB VRAM total) is able to do ray tracing and is more comparable. There also is the trouble of provisioning instances online; these nodes are in demand and can’t always be created without waiting.</p> <p>Minerva cost roughly $8.2k due to most parts coming from eBay. Let’s assume that whatever comparable cloud solution costs on average, $2/hr. Minerva uses around 1500W at full load. Minerva’s electricity cost, assuming an expensive $0.34/kWh (in Boston), is ~$0.51/hr. So, for Minerva to make sense financially, I need to run training for about 5,503 hours, or about 230 days. Of course, this doesn’t account for the time-value of money (say if I invested what I saved by renting into <code class="language-plaintext highlighter-rouge">$SPY</code>), so I whipped up this python script to calculate some possible Net Present Value (NPV) outcomes.</p> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the NPV estimation.</b></summary> <div class="language-python highlighter-rouge"> <div class="highlight"> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">math</span>
+
+<span class="k">def</span> <span class="nf">calculate_pure_investment_outcome</span><span class="p">(</span><span class="n">initial_minerva_cost</span><span class="p">,</span> <span class="n">cloud_cost_per_hour</span><span class="p">,</span> 
+                                   <span class="n">electricity_cost_per_hour</span><span class="p">,</span> <span class="n">hours_per_year</span><span class="p">,</span> 
+                                   <span class="n">annual_return</span><span class="p">,</span> <span class="n">initial_years</span><span class="p">,</span> <span class="n">investment_years</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">
+    Calculate outcomes where computer usage stops after initial period and money is purely invested.
+    
+    Args:
+        initial_minerva_cost: Initial cost of Minerva
+        cloud_cost_per_hour: Hourly cost of cloud computing
+        electricity_cost_per_hour: Hourly cost of electricity
+        hours_per_year: Annual usage hours
+        annual_return: Expected annual return rate
+        initial_years: Years of computer usage
+        investment_years: Years of pure investment afterwards
+        
+    Returns:
+        list: List of tuples (year, npv, description) for key points
+    </span><span class="sh">"""</span>
+    <span class="k">if</span> <span class="n">annual_return</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="nc">ValueError</span><span class="p">(</span><span class="sh">"</span><span class="s">Annual return should be expressed as a decimal</span><span class="sh">"</span><span class="p">)</span>
+        
+    <span class="n">monthly_return</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">annual_return</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="n">monthly_hours</span> <span class="o">=</span> <span class="n">hours_per_year</span> <span class="o">/</span> <span class="mi">12</span>
+    <span class="n">monthly_savings</span> <span class="o">=</span> <span class="p">(</span><span class="n">cloud_cost_per_hour</span> <span class="o">-</span> <span class="n">electricity_cost_per_hour</span><span class="p">)</span> <span class="o">*</span> <span class="n">monthly_hours</span>
+    
+    <span class="k">def</span> <span class="nf">position_at_month</span><span class="p">(</span><span class="n">month</span><span class="p">):</span>
+        <span class="sh">"""</span><span class="s">Calculate net position after given number of months of computer usage</span><span class="sh">"""</span>
+        <span class="n">investment_value</span> <span class="o">=</span> <span class="n">initial_minerva_cost</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">monthly_return</span><span class="p">)</span> <span class="o">**</span> <span class="n">month</span>
+        
+        <span class="k">if</span> <span class="n">monthly_return</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">savings_value</span> <span class="o">=</span> <span class="n">monthly_savings</span> <span class="o">*</span> <span class="n">month</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">savings_value</span> <span class="o">=</span> <span class="n">monthly_savings</span> <span class="o">*</span> <span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="n">monthly_return</span><span class="p">)</span> <span class="o">**</span> <span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">monthly_return</span>
+            
+        <span class="k">return</span> <span class="n">savings_value</span> <span class="o">-</span> <span class="n">investment_value</span><span class="p">,</span> <span class="n">savings_value</span>
+    
+    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
+    
+    <span class="c1"># Initial position (year 0)
+</span>    <span class="n">results</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">initial_minerva_cost</span><span class="p">,</span> <span class="sh">"</span><span class="s">Initial investment</span><span class="sh">"</span><span class="p">))</span>
+    
+    <span class="c1"># Position at end of computer usage period
+</span>    <span class="n">total_months</span> <span class="o">=</span> <span class="n">initial_years</span> <span class="o">*</span> <span class="mi">12</span>
+    <span class="n">final_position</span><span class="p">,</span> <span class="n">final_savings</span> <span class="o">=</span> <span class="nf">position_at_month</span><span class="p">(</span><span class="n">total_months</span><span class="p">)</span>
+    <span class="n">npv_at_initial</span> <span class="o">=</span> <span class="n">final_position</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">monthly_return</span><span class="p">)</span> <span class="o">**</span> <span class="n">total_months</span> <span class="k">if</span> <span class="n">monthly_return</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">final_position</span>
+    <span class="n">results</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">initial_years</span><span class="p">,</span> <span class="n">npv_at_initial</span><span class="p">,</span> <span class="sh">"</span><span class="s">End of computer usage</span><span class="sh">"</span><span class="p">))</span>
+    
+    <span class="c1"># Pure investment period - just let the final position grow
+</span>    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">investment_years</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">months</span> <span class="o">=</span> <span class="n">year</span> <span class="o">*</span> <span class="mi">12</span>
+        <span class="c1"># Growth of final position for additional years
+</span>        <span class="n">future_value</span> <span class="o">=</span> <span class="n">final_position</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">monthly_return</span><span class="p">)</span> <span class="o">**</span> <span class="n">months</span>
+        <span class="c1"># NPV calculation should only discount back from current point in time
+</span>        <span class="n">npv</span> <span class="o">=</span> <span class="n">future_value</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">monthly_return</span><span class="p">)</span> <span class="o">**</span> <span class="n">months</span>
+        
+        <span class="k">if</span> <span class="n">year</span> <span class="o">==</span> <span class="n">investment_years</span><span class="p">:</span>  <span class="c1"># Only include final year to keep output clean
+</span>            <span class="n">results</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">initial_years</span> <span class="o">+</span> <span class="n">year</span><span class="p">,</span> <span class="n">npv</span><span class="p">,</span> <span class="sh">"</span><span class="s">End of investment period</span><span class="sh">"</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">results</span>
+
+<span class="k">def</span> <span class="nf">print_pure_investment_analysis</span><span class="p">(</span><span class="n">minerva_cost</span><span class="p">,</span> <span class="n">cloud_cost_per_hour</span><span class="p">,</span> <span class="n">electricity_cost_per_hour</span><span class="p">,</span>
+                                 <span class="n">usage_scenarios</span><span class="p">,</span> <span class="n">returns</span><span class="p">,</span> <span class="n">initial_years</span><span class="p">,</span> <span class="n">investment_years</span><span class="p">):</span>
+    <span class="sh">"""</span><span class="s">Print analysis of computer usage followed by pure investment period.</span><span class="sh">"""</span>
+    <span class="k">for</span> <span class="n">hours</span> <span class="ow">in</span> <span class="n">usage_scenarios</span><span class="p">:</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="se">\n</span><span class="s">Analysis for </span><span class="si">{</span><span class="n">hours</span><span class="si">}</span><span class="s"> hours per year:</span><span class="sh">"</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Return (%) | Year | NPV (Dollars) | Stage</span><span class="sh">"</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">-</span><span class="sh">"</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">ret</span> <span class="ow">in</span> <span class="n">returns</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">results</span> <span class="o">=</span> <span class="nf">calculate_pure_investment_outcome</span><span class="p">(</span>
+                    <span class="n">minerva_cost</span><span class="p">,</span> <span class="n">cloud_cost_per_hour</span><span class="p">,</span> <span class="n">electricity_cost_per_hour</span><span class="p">,</span>
+                    <span class="n">hours</span><span class="p">,</span> <span class="n">ret</span><span class="p">,</span> <span class="n">initial_years</span><span class="p">,</span> <span class="n">investment_years</span>
+                <span class="p">)</span>
+                
+                <span class="k">for</span> <span class="n">year</span><span class="p">,</span> <span class="n">npv</span><span class="p">,</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">ret</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="mf">9.1</span><span class="n">f</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">year</span><span class="si">:</span><span class="mi">4</span><span class="n">d</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">npv</span><span class="si">:</span><span class="p">,.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">description</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+                <span class="nf">print</span><span class="p">()</span>
+                
+            <span class="k">except</span> <span class="nb">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+                <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">ret</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="mf">9.1</span><span class="n">f</span><span class="si">}</span><span class="s"> | Error: </span><span class="si">{</span><span class="nf">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="sh">"</span><span class="s">__main__</span><span class="sh">"</span><span class="p">:</span>
+    <span class="n">minerva_cost</span> <span class="o">=</span> <span class="mi">8200</span>  <span class="c1"># Minerva initial investment ($)
+</span>    <span class="n">cloud_cost_per_hour</span> <span class="o">=</span> <span class="mf">2.00</span>  <span class="c1"># Cloud rental cost per hour ($)
+</span>    <span class="n">electricity_cost_per_hour</span> <span class="o">=</span> <span class="p">.</span><span class="mi">51</span>  <span class="c1"># Minerva electricity cost per hour ($)
+</span>    
+    <span class="n">usage_scenarios</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1300</span><span class="p">,</span> <span class="mi">1400</span><span class="p">,</span> <span class="mi">2800</span><span class="p">]</span>
+    <span class="n">returns</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.10</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.20</span><span class="p">]</span>
+    
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="se">\n</span><span class="s">=== Scenario: 6 years usage + 25 years investment ===</span><span class="sh">"</span><span class="p">)</span>
+    <span class="nf">print_pure_investment_analysis</span><span class="p">(</span><span class="n">minerva_cost</span><span class="p">,</span> <span class="n">cloud_cost_per_hour</span><span class="p">,</span> <span class="n">electricity_cost_per_hour</span><span class="p">,</span>
+                                 <span class="n">usage_scenarios</span><span class="p">,</span> <span class="n">returns</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span></code></pre></figure> </div> </div> </details> <details class="highlight"> <summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the NPV results.</b></summary> <div class="language-python highlighter-rouge"> <div class="highlight"> <figure class="highlight"><pre><code class="language-bash" data-lang="bash">garylvov@minerva:~<span class="nv">$ </span>python3 extended_value.py 
+
+<span class="o">===</span> Scenario: 6 years usage + 25 years investment <span class="o">===</span>
+
+Analysis <span class="k">for </span>1300 hours per year:
+Return <span class="o">(</span>%<span class="o">)</span> | Year | NPV <span class="o">(</span>Dollars<span class="o">)</span> | Stage
+<span class="nt">------------------------------------------------------------</span>
+      5.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+      5.0 |    6 | 1,854.94 | End of computer usage
+      5.0 |   31 | 2,485.80 | End of investment period
+
+     10.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     10.0 |    6 | 616.14 | End of computer usage
+     10.0 |   31 | 1,091.54 | End of investment period
+
+     15.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     15.0 |    6 | <span class="nt">-378</span>.20 | End of computer usage
+     15.0 |   31 | <span class="nt">-874</span>.79 | End of investment period
+
+     20.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     20.0 |    6 | <span class="nt">-1</span>,187.44 | End of computer usage
+     20.0 |   31 | <span class="nt">-3</span>,545.68 | End of investment period
+
+
+
+Analysis <span class="k">for </span>1400 hours per year:
+Return <span class="o">(</span>%<span class="o">)</span> | Year | NPV <span class="o">(</span>Dollars<span class="o">)</span> | Stage
+<span class="nt">------------------------------------------------------------</span>
+      5.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+      5.0 |    6 | 2,628.40 | End of computer usage
+      5.0 |   31 | 3,522.30 | End of investment period
+
+     10.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     10.0 |    6 | 1,294.31 | End of computer usage
+     10.0 |   31 | 2,292.95 | End of investment period
+
+     15.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     15.0 |    6 | 223.48 | End of computer usage
+     15.0 |   31 | 516.93 | End of investment period
+
+     20.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     20.0 |    6 | <span class="nt">-648</span>.01 | End of computer usage
+     20.0 |   31 | <span class="nt">-1</span>,934.96 | End of investment period
+
+
+
+Analysis <span class="k">for </span>2800 hours per year:
+Return <span class="o">(</span>%<span class="o">)</span> | Year | NPV <span class="o">(</span>Dollars<span class="o">)</span> | Stage
+<span class="nt">------------------------------------------------------------</span>
+      5.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+      5.0 |    6 | 13,456.79 | End of computer usage
+      5.0 |   31 | 18,033.39 | End of investment period
+
+     10.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     10.0 |    6 | 10,788.62 | End of computer usage
+     10.0 |   31 | 19,112.69 | End of investment period
+
+     15.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     15.0 |    6 | 8,646.96 | End of computer usage
+     15.0 |   31 | 20,000.95 | End of investment period
+
+     20.0 |    0 | <span class="nt">-8</span>,200.00 | Initial investment
+     20.0 |    6 | 6,903.97 | End of computer usage
+     20.0 |   31 | 20,615.15 | End of investment period</code></pre></figure> </div> </div> </details> <p>According to my NPV estimation, if I run training for roughly 4-6 days a month at full load on average, I could break even within 6 years. This of course includes assumptions, such as 10% return average market return, and that the cost of compute/electricity will remain similar but in retort I’ll reference one of my favorite quotes; “All models are wrong but some are useful.”</p> <p>An argument that my Dad and some of my coworkers make is that there is no point in purchasing such a machine when I’ll likely often have the keys to a much more powerful cluster through an employer. There is some truth to this, as returning to Minerva after running training on many <code class="language-plaintext highlighter-rouge">8x NVIDIA H100</code> nodes can feel like going back to a Mercedes after driving a Koenigsegg. That being said, Minerva has the advantage of always being available for my use, while allowing me to retain complete ownership over what I create.</p> <p>So to summarize, is Minerva worth it? Financially, maybe. Personally speaking, having such a great resource in my room encourages me to do more training runs more frequently - after all, I have no excuse to not train many of the things I would like to try out. I also really love having complete ownership of my creations, which Minerva allows me to retain. I hope that the work Minerva enables me to complete will have intrinsic value as well ;)</p> <h1 id="future-upgrades">Future Upgrades</h1> <p>I designed Minerva to hopefully be my main personal computer for at least the next 10 years - with a motherboard that supports 7 PCIE Gen 5 slots, there is a lot of room to upgrade GPUs. Currently the limiting factor in getting more GPUs is my PSU (and my bank account), where all available VGA power connectors are already in use. When I can afford upgrades I plan to get a second PSU (plugged into an outlet on a different breaker to get around the US 1600W limit), and then add several more GPUs. I’ve seen some really attractive listings for the <code class="language-plaintext highlighter-rouge">AMD Radeon Instinct MI60 32GB HBM2 300W</code>, or I may get more <code class="language-plaintext highlighter-rouge">NVIDIA 3090 TI 24G</code> cards, or maybe even <code class="language-plaintext highlighter-rouge">NVIDIA 4080 16G</code> cards. If I add more GPUs than my current 4, I’ll definitely have to 3D print some more modifications to my case to be able to mount them.</p> <p>Also, ideally I’d watercool the entire rig, although this would make it more difficult to transport, more complex, more expensive, and harder to maintain, so for now I’ve done air-cooling only. If I know that I won’t be moving for a long time, I’ll definitely watercool. This would allow for many more GPUs to fit in the case due to a lower thickness (the current 4x 3-Slot cards take up a lot of room that could be reduced) while maintaining great temperature.</p> <p>There is also the potential option of bifurcating my PCIE slots to fit more than 7 GPUs, which would be really cool, although past 6 GPUs I’d have to use <code class="language-plaintext highlighter-rouge">8x</code> PCIE lanes instead of the current <code class="language-plaintext highlighter-rouge">16x</code> which I think would totally work well too.</p> </article> </div> </div> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?85ddb88934d28b74e78031fd54cf8308"></script> <script src="/assets/js/no_defer.js?2781658a0a2b13ed609542042a859126"></script> <script defer src="/assets/js/common.js?e0514a05c5c95ac1a93a8dfd5249b92e"></script> <script defer src="/assets/js/copy_code.js?12775fdf7f95e901d7119054556e495f" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?d9f17b6adc2311cbabd747f4538bb15f"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> <script src="/assets/js/vanilla-back-to-top.min.js?f40d453793ff4f64e238e420181a1d17"></script> <script>addBackToTop();</script> </body> </html>
