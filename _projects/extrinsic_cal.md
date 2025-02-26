@@ -17,9 +17,6 @@ My code will hopefully be released soon!
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/robo-icp/robo-icp.gif" title="Results" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/robo-icp/robo-icp.gif" title="Results" class="img-fluid rounded z-depth-1" %}
-    </div>
 </div>
 <div class="caption">
     Experimental matching results obtained with an externally mounted Intel Realsense L515 (on a tripod) and a Kinova Jaco 2, with Open3D doing most of the work while running inside on a container with ROS 2 Humble.

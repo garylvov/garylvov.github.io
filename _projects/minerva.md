@@ -46,7 +46,7 @@ a Single-Node, ```4x NVIDIA L40``` GPU, CPU: Intel(R) Xeon(R) Platinum 8362 CPU 
 In this environment, a robot hand learns to position a cube in the desired orientation.
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the commands to run multi-GPU training inside of Docker</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the commands to run multi-GPU training inside of Docker</b></summary>
 <div class="language-python highlighter-rouge">
 {% highlight bash %}
 mkdir -p projects/ && cd projects && git clone https://github.com/isaac-sim/IsaacLab.git && cd IsaacLabs
@@ -54,7 +54,7 @@ echo \
 "services:
   isaac-lab-base:
     shm_size: '2gb'" > docker/shm-config.yaml
-./docker/container.py start --files shm-config.yaml
+python3 docker/container.py start --files shm-config.yaml
 # [INFO] Using container profile: base
 # [INFO] X11 Forwarding is configured as '0' in '.container.cfg'.
 # 	To enable X11 forwarding, set 'X11_FORWARDING_ENABLED=1' in '.container.cfg'.
@@ -88,7 +88,7 @@ than ```1x 4090``` (which achieves 170,000 FPS), while running at a clock limit 
 On Minerva, the hand cube repose task can be solved within 20 minutes with 4 GPUs. It takes longer with one GPU.
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See verbose output of benchmark</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see verbose output of benchmark</b></summary>
 <div class="language-python highlighter-rouge">
 {% highlight bash %}
 root@minerva:/workspace/isaaclab# python scripts/benchmarks/benchmark_rlgames.py --task=Isaac-Repose-Cube-Shadow-Direct-v0 --headless
@@ -408,7 +408,7 @@ The following is an example of tuning quadrupedal gait parameters on flat terrai
 For the Northeastern Mars Rover team, I trained a "mallet" and "bottle" detector. About 27,000 images at ```800p``` resolution were used to train 409 layers, 20,054,550 parameters, 20,054,534 gradients, with 12 epochs taking about 24 minutes.
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the code snippet of running the model</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the code snippet of running the model</b></summary>
 <div class="language-python highlighter-rouge">
 {% highlight python %}
 from ultralytics import YOLO
@@ -441,7 +441,7 @@ model.train(data=data_yaml,
 </details>
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the output of running the model</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the output of running the model</b></summary>
 <div class="language-python highlighter-rouge">
 {% highlight bash %}
 python3 train.py # In conda environment
@@ -572,11 +572,11 @@ Starting training for 100 epochs...
 
 ## Case Study IV: Running DeepSeek-R1-Distill-Llama-70B
 
-Running DeepSeek with Ollama on NVIDIA GPUs requires the NVIDIA Container Toolkit as shown above. Then it's as easy as increasing the context window
+Running Ollama distilled from Deepseek-R1 on NVIDIA GPUs requires the NVIDIA Container Toolkit as shown above. Then it's as easy as increasing the context window
 on some 70B parameter distillations of Deepseek's models to push Minerva's limits.
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>See the code snippet of running Deepseek-r1:70B with a larger context window</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the code snippet of running Deepseek-r1:70B with a larger context window</b></summary>
 <div class="language-python highlighter-rouge">
 {% highlight bash %}
 docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
@@ -646,7 +646,7 @@ Of course, this doesn't account for the time-value of money (say if I invested w
 calculate some possible Net Present Value (NPV) outcomes.
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the NPV estimation.</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the NPV estimation</b></summary>
 <div class="language-python highlighter-rouge">
 <div class="highlight">
 {% highlight python %}
@@ -752,7 +752,7 @@ if __name__ == "__main__":
 </details>
 
 <details class="highlight">
-<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the NPV results.</b></summary>
+<summary class="code-dropdown-header" style="font-weight: 900 !important;"><b>Click to see the NPV results</b></summary>
 <div class="language-python highlighter-rouge">
 <div class="highlight">
 {% highlight bash %}
