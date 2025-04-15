@@ -19,7 +19,7 @@ social: true # includes social icons at the bottom of the page
 Hi! I'm passionate about solving challenging problems to create a definite and positive impact on people's lives. 
 My current research interests lie in creating general robots that can reason, learn, and act in 
 the world they perceive to help people. I'm especially interested in robot learning from visuo-tactile observations 
-to complete long-horizon tasks that require bimanual contact-rich dexterous manipulation (making robots do complex stuff with their hands based on what they see and feel).
+to complete long-horizon tasks that require bimanual contact-rich dexterous manipulation (teaching robots to do complex stuff with their hands based on what they see and feel).
 
 I'm a PhD student advised by Prof. [Stefanie Tellex](https://www.linkedin.com/in/stefanie-tellex-38468818/) in the [Humans to Robots Lab](https://h2r.cs.brown.edu/) at Brown University.
 
@@ -27,5 +27,5 @@ I've worked at the [Robotics & AI Institute (formerly Boston Dynamics AI Institu
  [Amazon Robotics](https://www.linkedin.com/company/amazon-fulfillment-technologies-robotics/p), and
  the Robotics & Autonomous Systems Lab@[General Electric Research](https://www.linkedin.com/company/geresearch/).
 
-I graduated from Northeastern University in 2025 with a Bachelor of Science in Computer Engineering and Computer Science, where I was advised by Prof. [Taskin Padir](https://www.linkedin.com/in/tpadir/)
+I graduated from Northeastern University with a Bachelor of Science in Computer Engineering and Computer Science, where I was advised by Prof. [Taskin Padir](https://www.linkedin.com/in/tpadir/)
 in the [Robotics & Intelligent Vehicles Research Lab](https://robot.neu.edu/).
