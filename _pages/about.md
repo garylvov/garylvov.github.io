@@ -27,5 +27,5 @@ I've worked at the [Robotics & AI Institute (formerly Boston Dynamics AI Institu
  [Amazon Robotics](https://www.linkedin.com/company/amazon-fulfillment-technologies-robotics/p), and
  the Robotics & Autonomous Systems Lab@[General Electric Research](https://www.linkedin.com/company/geresearch/).
 
-I graduated from Northeastern University with a Bachelor of Science in Computer Engineering and Computer Science, where I was advised by Prof. [Taskin Padir](https://www.linkedin.com/in/tpadir/)
+I have a Bachelor of Science in Computer Engineering and Computer Science from Northeastern University, where I was advised by Prof. [Taskin Padir](https://www.linkedin.com/in/tpadir/)
 in the [Robotics & Intelligent Vehicles Research Lab](https://robot.neu.edu/).
