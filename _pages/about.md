@@ -16,15 +16,16 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi! I'm passionate about solving challenging problems to create a definite, positive impact on people's lives. 
-Currently, I'm focused on robotics, machine learning, and machine perception. While I 
-believe people must collaborate to solve our fundamental challenges, I'm hopeful that robots
-will play a vital role in supporting us along the way.
+Hi! I'm passionate about solving challenging problems to create a definite and positive impact on people's lives. 
+My current research interests lie in creating general robots that can reason, learn, and act in 
+the world they perceive to help people. I'm especially interested in robot learning from visuo-tactile observations 
+to complete long-horizon tasks that require bimanual contact-rich dexterous manipulation (making robots do complex stuff with their hands based on what they see and feel).
 
-My research interests lie in creating general embodied agents that can reason, learn, and act in 
-the world they perceive to help people complete tasks. I've worked at the [Robotics and AI Institute](https://rai-inst.com/),
- [Amazon Robotics](https://www.linkedin.com/company/amazon-fulfillment-technologies-robotics/p),
- the Robotics & Autonomous Systems Lab@[General Electric Research](https://www.linkedin.com/company/geresearch/),
- and the [Robotics & Intelligent Vehicles Research Lab](https://robot.neu.edu/)@[Northeastern University](https://robotics.northeastern.edu/).
+I'm a PhD student advised by Prof. [Stefanie Tellex](https://www.linkedin.com/in/stefanie-tellex-38468818/) in the [Humans to Robots Lab](https://h2r.cs.brown.edu/) at Brown University.
 
-I'm graduating from Northeastern University in May 2025 with a Bachelor of Science in Computer Engineering and Computer Science.
+I've worked at the [Robotics & AI Institute (formerly Boston Dynamics AI Institute)](https://rai-inst.com/),
+ [Amazon Robotics](https://www.linkedin.com/company/amazon-fulfillment-technologies-robotics/p), and
+ the Robotics & Autonomous Systems Lab@[General Electric Research](https://www.linkedin.com/company/geresearch/).
+
+I graduated from Northeastern University in 2025 with a Bachelor of Science in Computer Engineering and Computer Science, where I was advised by Prof. [Taskin Padir](https://www.linkedin.com/in/tpadir/)
+in the [Robotics & Intelligent Vehicles Research Lab](https://robot.neu.edu/).
