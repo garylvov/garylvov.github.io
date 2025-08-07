@@ -1,0 +1,33 @@
+{% assign video_height = include.height | default: 450 %}
+{% assign video_max_width = include.max_width | default: 1000 %}
+
+<style>
+.full-width-video {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 40px 0;
+    background: rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.full-width-video iframe {
+    width: 100% !important;
+    max-width: {{ video_max_width }}px;
+    height: {{ video_height }}px !important;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+</style>
+
+<div class="full-width-video">
+    <iframe
+        src="https://www.youtube.com/embed/{{ include.video_id }}"
+        class="img-fluid rounded z-depth-1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</div> 
