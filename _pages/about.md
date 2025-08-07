@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 
 Hi! I'm passionate about solving challenging problems to create a definite and positive impact on people's lives. 
 My current research interests lie in creating general robots that can reason, learn, and act in 
-the world they perceive to help people. I'm especially interested in teaching robots to do complex stuff with their hands based on what they see and feel.
+the world they perceive. I'm especially interested in teaching robots to complete complex tasks with their hands based on what they see and feel.
 
 I'm a PhD student advised by Prof. [Stefanie Tellex](https://www.linkedin.com/in/stefanie-tellex-38468818/) in the [Humans to Robots Lab](https://h2r.cs.brown.edu/) at Brown University.
 
