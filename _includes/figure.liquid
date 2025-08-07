@@ -72,7 +72,10 @@
       {% if include.loading %}
         loading="{{ include.loading }}"
       {% elsif site.lazy_loading_images %}
-        loading="lazy"
+        {% assign loading_mode = site.lazy_loading_images | downcase %}
+        {% if loading_mode == 'lazy' or loading_mode == 'eager' or loading_mode == 'auto' %}
+          loading="{{ loading_mode }}"
+        {% endif %}
       {% endif %}
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     >
