@@ -1,7 +1,6 @@
 ---
 layout: page
-title: My Deep Learning Rig (Minerva)
-description: My beloved  deep learning workstation
+title: My Beloved Deep Learning Rig (Minerva)
 img: assets/img/minerva/quad_3090_pc.jpg
 importance: 4
 category: hardware

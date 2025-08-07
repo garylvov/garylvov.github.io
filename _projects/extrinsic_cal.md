@@ -2,7 +2,6 @@
 layout: page
 title: Find the Transform From Any Depth Sensor to Any Robot
 img: assets/img/robo-icp/robo-icp.gif
-description: Finds the extrinsic transform from a depth sensor to a robot from a single view; or obtaining point clouds in the robot's base frame for botg egocentric and external depth sensor placements.
 importance: 2
 category: robotics
 startDate: 2023-01-01

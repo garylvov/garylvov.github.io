@@ -1,7 +1,7 @@
 ---
 layout: page
 title: NVIDIA Isaac Lab Contributions
-description: Open-source contributions to NVIDIA Isaac Lab; distributed hyperparameter tuning, image feature extraction with pretrained frozen models, and standardized environments for vision-based reinforcement learning.
+description: Distributed hyperparameter tuning, image feature extraction, and more
 img: assets/img/isaac_lab_thumb.png
 importance: 1
 category: open-source

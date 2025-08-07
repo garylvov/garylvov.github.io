@@ -1,7 +1,6 @@
 ---
 layout: redirect
 title: Ultimate NVIDIA CUDA/Drivers Linux Installation Guide
-description: Comprehensive guide for NVIDIA GPU setup on Ubuntu Linux.
 img: assets/img/minerva/quad_3090_nvidia-smi.png
 importance: 3
 category: guides
