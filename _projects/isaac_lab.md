@@ -7,7 +7,7 @@ importance: 1
 category: open-source
 --- 
 
-Here are some highlights of my work on Isaac Lab:
+Here are some highlights of my work on [Isaac Lab](https://isaac-sim.github.io/IsaacLab/main/index.html):
 - I added distributed hyperparameter tuning to Isaac Lab that can be seamlessly run on a cluster or on a single machine ([documentation](https://isaac-sim.github.io/IsaacLab/main/source/features/ray.html), [code](https://github.com/isaac-sim/IsaacLab/tree/b1133e0591c2ef3a788c1ca148bb25a3f42562a9/scripts/reinforcement_learning/ray),[YouTube video covering the functionality](https://youtu.be/z7MDgSga2Ho?si=UgH5XngHa2uUu3lN)).
 
 {% include youtube_video.liquid video_id="z7MDgSga2Ho" %}
