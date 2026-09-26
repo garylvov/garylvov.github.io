@@ -4,9 +4,9 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Gary Lvov
-middle_name: 
+middle_name:
 last_name:
-email: 
+email:
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Gary Lvov's website. Welcome!
 
@@ -47,7 +47,8 @@ rss_icon: false
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
+navbar_enabled: false
+navbar_fixed: false
 footer_fixed: false
 search_enabled: false
 socials_in_search: true
@@ -109,10 +110,10 @@ wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
 work_url: # work page URL
 x_username: # your X handle
-youtube_id: garylvov704 # your youtube channel id (youtube.com/@<youtube_id>)
+youtube_id: garylvov # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
-contact_note: > 
+contact_note: >
   Feel free to contact me via LinkedIn
 
 # -----------------------------------------------------------------------------
@@ -434,7 +435,7 @@ enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
-enable_progressbar: true # enables a horizontal progress bar linked to the vertical scroll position
+enable_progressbar: false # enables a horizontal progress bar linked to the vertical scroll position
 enable_video_embedding: false # enables video embedding for bibtex entries. If false, the button opens the video link in a new window.
 
 # -----------------------------------------------------------------------------
