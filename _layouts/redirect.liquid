@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="refresh" content="0; url={{ page.redirect }}">
-<link rel="canonical" href="{{ page.redirect }}" />
+<meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="{{ page.redirect | relative_url }}" />
 </head>
 <body>
-<p>This page has been moved. If you are not redirected automatically, follow this <a href="{{ page.redirect }}">link</a>.</p>
+<p>This page has been moved. If you are not redirected automatically, follow this <a href="{{ page.redirect | relative_url }}">link</a>.</p>
 </body>
-</html> 
+</html>

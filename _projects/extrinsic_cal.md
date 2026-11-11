@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: redirect
 title: Find the Transform From Any Depth Sensor to Any Robot
 img: assets/img/robo-icp/robo-icp.gif
 importance: 2

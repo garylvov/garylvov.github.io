@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: redirect
 title: My Beloved Deep Learning Rig (Minerva)
 img: assets/img/minerva/quad_3090_pc.jpg
 importance: 4

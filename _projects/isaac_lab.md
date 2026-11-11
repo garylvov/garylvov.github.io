@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: redirect
 title: NVIDIA Isaac Lab Contributions
 description: Distributed hyperparameter tuning, image feature extraction, and more
 img: assets/img/isaac_lab_thumb.png
