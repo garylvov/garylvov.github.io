@@ -275,6 +275,13 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: redirect
+      redirect: /
+      sitemap: false
 
 sass:
   style: compressed

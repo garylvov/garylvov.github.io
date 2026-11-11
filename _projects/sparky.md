@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: redirect
 title: Robot Quadruped (Sparky)
 img: assets/img/sparky.gif
 importance: 2000000
